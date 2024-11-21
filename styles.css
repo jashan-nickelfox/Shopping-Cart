@@ -1,0 +1,267 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc; 
+  }
+  
+  .logo {
+    display:flex;
+    font-size: 44px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-right: 1000px;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: rgb(133, 133, 133);
+  }
+  
+  .profile-cart {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    margin-right: 2px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .cart-pic {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cart-count {
+    position: inherit;
+    top: -5px;
+    right: -5px;
+    background-color: darkorange;
+    color: black;
+    font-size: 14px;
+    font-weight: normal;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+  }
+
+  /* Popup Styling */
+.cart-popup {
+  display: none;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 230, 184);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 5px;
+  z-index: 1000;
+  width: 90%;
+  max-width: 400px;
+}
+
+.cart-popup-content {
+  text-align: center;
+
+}
+
+.cart-popup h2 {
+  font-size: 25px;
+  margin-bottom: 45px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cart-popup #cart-message {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.cart-popup #cart-details {
+  margin-bottom: 25px;
+}
+
+.cart-popup button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.cart-popup .checkout {
+  background-color: red;
+  color: white;
+}
+
+.cart-popup .close-popup {
+  background-color: red;
+  color: white;
+}
+
+/* Overlay Styling */
+body.popup-open {
+  overflow: hidden;
+}
+
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 50px;
+  }
+  
+  .product-page {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    gap: 40px;
+  }
+  
+  .product-images {
+    flex: 1;
+  }
+  
+  #main-image {
+    width: 70%;
+    border-radius: 10px;
+  }
+  
+  .thumbnail-container {
+    display: inline-block;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .thumbnail {
+    width: 94.5px;
+    height: 94.5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: opacity 0.1s ;
+    margin-right:inherit;
+  }
+  
+  .thumbnail:hover {
+    border-color: orange;
+    opacity: 0.4;
+  }
+
+  .product-details {
+    flex: 1;
+  }
+  
+  .product-details h2 {
+    font-size: 28px;
+    margin-top: auto;
+    margin-bottom: 30px;
+  }
+  
+  .description {
+    
+    color: gray;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .current-price {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .discount {
+    color: white;
+    background: black;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .original-price {
+    text-decoration: line-through;
+    color: gray;
+    display: block;
+  }
+  
+  .quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+  }
+  
+  .quantity {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .quantity button {
+    padding: 15px 10px;
+    border: 1px solid gray;
+    background: white;
+    cursor: pointer;
+  }
+  
+  .quantity span {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+  
+  .add-to-cart {
+    background: rgb(199, 125, 34);
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: url('./images/icon-cart.svg'); 
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 20px;
+    padding-left: 50px; 
+    transition: opacity 0.5s ease;
+    margin-left: 25px;
+  }
+  
+  .add-to-cart:hover {
+    background: darkorange;
+    opacity:0.9;
+  }
+  
